@@ -1,6 +1,6 @@
 # Large Scale Workshop
 
-This project displays a basic distributed, service-oriented system including the following concepts: Remote Procedure Call, Service Discovery, Distributed cache and Message Queue.
+This project displays a basic distributed, service-oriented system including the following concepts: Remote Procedure Call, Service Discovery, Distributed hash table and Message Queue.
 
 The system has three services:
 - Registry Service - service discovery.
