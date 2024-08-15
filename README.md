@@ -9,7 +9,7 @@ The system has three services:
 
 Each new service node that starts in the system registers itself using the Registry service (e.g. Test and Cache services). The Registry service's root node (the first node to start) peforms an "IsAlive" check (every 10 seconds) on each node in the systems, and if it fails to answer within 3 retries - we unregister it from the system.
 
-Both Registry and Cache services use the Chord structure to store their data. The communication between the services in the system is performed using gRPC, and while the Test service specifically supports an async Message Queue (ZeroMQ).
+Both Registry and Cache services use the Chord structure (distributed hash table) to store their data. The communication between the services in the system is performed using gRPC with Protobuf, and the Test service specifically supports an async Message Queue (ZeroMQ).
 
 
 ## Getting started
