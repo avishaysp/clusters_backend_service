@@ -1,0 +1,30 @@
+syntax = "proto3";
+option go_package = "CacheService";
+package cacheservice;
+
+// Import the necessary types for streaming and callback
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+
+message SetKeyValueReq {
+    string key = 1;
+    string value = 2;
+}
+
+message GetKeyReq {
+    string key = 1;
+}
+message GetValueReq {
+    string value = 1;
+}
+
+
+service CacheService {
+    rpc Set(SetKeyValueReq) returns (google.protobuf.Empty);
+
+    rpc Get(GetKeyReq) returns (GetValueReq);
+
+    rpc Delete(GetKeyReq) returns (google.protobuf.Empty);
+
+    rpc IsAlive(google.protobuf.Empty) returns (google.protobuf.BoolValue);
+}

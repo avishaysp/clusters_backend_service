@@ -1,0 +1,25 @@
+syntax = "proto3";
+option go_package = "RegService";
+package regservice;
+
+// Import the necessary types for streaming and callback
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+
+message UpdateRegistryParameters {
+    string service_name = 1;
+    string node_addr = 2;
+}
+
+message DiscoveredServers {
+    repeated string addresses = 1;
+}
+
+
+service RegService {
+    rpc register(UpdateRegistryParameters) returns (google.protobuf.Empty);
+
+    rpc unregister(UpdateRegistryParameters) returns (google.protobuf.Empty);
+
+    rpc discover(google.protobuf.StringValue) returns (DiscoveredServers);
+}
