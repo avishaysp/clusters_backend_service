@@ -2,7 +2,6 @@ package RegServiceServant
 
 import (
 	"fmt"
-	"strings"
 	"sync"
 	"time"
 
@@ -23,12 +22,9 @@ type NodeStatus struct {
 	Alive     bool
 }
 
-func encodeStrings(lst []string) string {
-	return strings.Join(lst, ",")
-}
-
-func decodeStrings(enc string) []string {
-	return strings.Split(enc, ",")
+// helper functions
+func IsFirst() bool {
+	return is_first
 }
 
 func isInChord(key string) bool {
@@ -44,11 +40,6 @@ func isInChord(key string) bool {
 		}
 	}
 	return false
-}
-
-// helper functions
-func IsFirst() bool {
-	return is_first
 }
 
 func InitServant(chord_name string) {
@@ -82,11 +73,11 @@ func InitServant(chord_name string) {
 }
 
 // Registry API
-func Register(service_name string, node_address string) {
+func Register(service_name string, addresses NodeAddresses) {
 	mutex.Lock()
 	defer mutex.Unlock()
 
-	var addresses []string // by default, empty list
+	var nodes []string // by default, empty list
 	var err error
 
 	// get service addresses
@@ -96,31 +87,34 @@ func Register(service_name string, node_address string) {
 		if err != nil {
 			utils.Logger.Printf("chordNode.Get failed with error: %v", err)
 		}
-		addresses = decodeStrings(enc)
+		nodes = decodeStrings(enc)
 	}
 
-	// checks if address already exists
-	if len(addresses) > 0 {
-		for _, address := range addresses {
-			if address == node_address {
-				utils.Logger.Printf("Address %s already exists for service %s\n", node_address, service_name)
+	// encode addresses
+	enc_node_address := encodeProtocols(addresses)
+
+	// checks if (encoded) address already exists
+	if len(nodes) > 0 {
+		for _, node_address := range nodes {
+			if node_address == enc_node_address {
+				utils.Logger.Printf("Address %s already exists for service %s\n", enc_node_address, service_name)
 				return
 			}
 		}
 	}
 
 	// add to list and set back to chord
-	addresses = append(addresses, node_address)
-	updated_enc := encodeStrings(addresses)
+	nodes = append(nodes, enc_node_address)
+	updated_enc := encodeStrings(nodes)
 	err = chordNode.Set(service_name, updated_enc)
 	if err != nil {
 		utils.Logger.Printf("chordNode.Set failed with error: %v", err)
 	}
-	utils.Logger.Printf("Address %s added for service %s\n", node_address, service_name)
+	utils.Logger.Printf("Address %s added for service %s\n", enc_node_address, service_name)
 }
 
 // note: assuming service_name is registered
-func unregisterFromChord(service_name string, node_address string) {
+func unregisterFromChord(service_name string, addresses NodeAddresses) {
 	// get the current list
 	enc, err := chordNode.Get(service_name)
 	if err != nil {
@@ -132,8 +126,11 @@ func unregisterFromChord(service_name string, node_address string) {
 		return
 	}
 
+	// encode address with protocol to search for it
+	enc_node_address := encodeProtocols(addresses)
+
 	for i, address := range lst {
-		if address == node_address {
+		if address == enc_node_address {
 			// remove from list and set back to chord
 			lst = append(lst[:i], lst[i+1:]...)
 			if len(lst) == 0 {
@@ -143,7 +140,7 @@ func unregisterFromChord(service_name string, node_address string) {
 				}
 				return
 			}
-			utils.Logger.Printf("Address %s removed for service %s\n", node_address, service_name)
+			utils.Logger.Printf("Address %s removed for service %s\n", enc_node_address, service_name)
 			updated_enc := encodeStrings(lst)
 			err = chordNode.Set(service_name, updated_enc)
 			if err != nil {
@@ -152,10 +149,10 @@ func unregisterFromChord(service_name string, node_address string) {
 			return
 		}
 	}
-	utils.Logger.Printf("Address %s not found for service %s\n", node_address, service_name)
+	utils.Logger.Printf("Address %s not found for service %s\n", enc_node_address, service_name)
 }
 
-func Unregister(service_name string, node_address string) {
+func Unregister(service_name string, addresses NodeAddresses) {
 	mutex.Lock()
 	defer mutex.Unlock()
 
@@ -163,9 +160,10 @@ func Unregister(service_name string, node_address string) {
 		utils.Logger.Printf("Service %s not registered!", service_name)
 	}
 
-	unregisterFromChord(service_name, node_address)
+	unregisterFromChord(service_name, addresses)
 }
 
+// returns a list of strings in the format of "$<protocol>$<address>...$...$..."
 func Discover(service_name string) ([]string, error) {
 	mutex.Lock()
 	defer mutex.Unlock()
@@ -208,49 +206,44 @@ func IsAliveCheck() {
 			}
 			addresses := decodeStrings(enc)
 
-			for _, address := range addresses {
-				utils.Logger.Printf("IsAliveCheck: Service = %s, Node = %v\n", serviceName, address)
+			for _, enc_address := range addresses {
+				utils.Logger.Printf("IsAliveCheck: Service = %s, Node = %v\n", serviceName, enc_address)
+
+				// decode the address with its protocol
+				node_addresses := decodeProtocols(enc_address)
+
 				var alive bool
 				var err error
 				switch serviceName {
-				case "TestService": // grpc
-					c := NewTestServiceClient(address, "")
+				case "TestService":
+					c := NewTestServiceClient(node_addresses["GRPC"], "")
 					alive, err = c.IsAlive()
-				case "TestServiceMQ": // mq
-					c := NewTestServiceClient("", address)
-					r, err := c.IsAliveAsync()
-					if err != nil {
-						utils.Logger.Printf("could not call IsAliveAsync: %v", err)
-						continue
-					}
-					alive, err = r()
-					//alive = true
 				case "CacheService":
-					c := NewCacheServiceClient(address)
+					c := NewCacheServiceClient(node_addresses["GRPC"])
 					alive, err = c.IsAlive()
 				default:
 					utils.Logger.Printf("Unknown service name: %v", serviceName)
 				}
 
 				// create node status if doesn't exist
-				_, ok := cacheMap[address]
+				_, ok := cacheMap[enc_address]
 				if !ok {
-					cacheMap[address] = &NodeStatus{FailCount: 0, Alive: true}
+					cacheMap[enc_address] = &NodeStatus{FailCount: 0, Alive: true}
 				}
 
 				// we assume that (!alive) iff (err != nil) in IsAlive implementation
 				if !alive {
-					utils.Logger.Printf("IsAliveCheck: Node %v is not alive: error = %v\n", address, err)
-					cacheMap[address].FailCount++
-					if cacheMap[address].FailCount >= 2 {
-						utils.Logger.Printf("IsAliveCheck: marking node as not alive! %v\n", address)
+					utils.Logger.Printf("IsAliveCheck: Node %v is not alive: error = %v\n", node_addresses["GRPC"], err)
+					cacheMap[enc_address].FailCount++
+					if cacheMap[enc_address].FailCount >= 2 {
+						utils.Logger.Printf("IsAliveCheck: marking node as not alive! %v\n", node_addresses["GRPC"])
 						// mark the node to be unregistered later
-						cacheMap[address].Alive = false
+						cacheMap[enc_address].Alive = false
 					}
 				} else {
-					utils.Logger.Printf("IsAliveCheck: Node %v is alive", address)
-					cacheMap[address].FailCount = 0
-					cacheMap[address].Alive = true
+					utils.Logger.Printf("IsAliveCheck: Node %v is alive", enc_address)
+					cacheMap[enc_address].FailCount = 0
+					cacheMap[enc_address].Alive = true
 				}
 			}
 
@@ -262,7 +255,7 @@ func IsAliveCheck() {
 					delete(cacheMap, addresses[i])
 
 					// unregister
-					unregisterFromChord(serviceName, addresses[i])
+					unregisterFromChord(serviceName, decodeProtocols(addresses[i]))
 				}
 			}
 		}

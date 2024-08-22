@@ -1,9 +1,17 @@
 #!/bin/bash
-ROOT_DIR=/workspaces/RLAD
+
+# Automatically set ROOT_DIR to the name of the repository
+ROOT_DIR=$(git rev-parse --show-toplevel 2>/dev/null)
+# Fallback to the current directory name if not inside a git repository
+if [ -z "$ROOT_DIR" ]; then
+  ROOT_DIR=$PWD
+fi
+echo "Root directory is set to: $ROOT_DIR"
+
 LSA_TARGET=$ROOT_DIR/output/large-scale-workshop
 SERVICES_DIR=$ROOT_DIR/services
 LOGS_DIR=$ROOT_DIR/output/logs
-SLEEP_NUMBER=8
+SLEEP_NUMBER=10
 
 # Parameters:
 #   $1 - the service configuration (yaml) under services dir
@@ -36,5 +44,3 @@ main () {
 
 main
 echo "APP READY"
-
-# 

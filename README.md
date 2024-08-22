@@ -7,23 +7,30 @@ The system has three services:
 - Cache Service - in-memory cache using Chord Distributed Hash Table.
 - Test Service - some basic functionalities.
 
-Each new service node that starts in the system registers itself using the Registry service (e.g. Test and Cache services). The Registry service's root node (the first node to start) peforms an "IsAlive" check (every 10 seconds) on each node in the systems, and if it fails to answer within 3 retries - we unregister it from the system.
+Each new service node that starts in the system registers itself using the Registry service (e.g. Test and Cache services). The Registry service's root node (the first node to start) peforms an "IsAlive" check (every 10 seconds) on each node in the system, and if it fails to answer within 3 retries - we unregister it from the system.
 
 Both Registry and Cache services use the Chord structure (distributed hash table) to store their data. The communication between the services in the system is performed using gRPC with Protobuf, and the Test service specifically supports an async Message Queue (ZeroMQ).
 
+![system](./utils/system.png)
 
 ## Getting started
 
-### Prerequisits
-This project was developed using “Visual Studio Code Dev-Container”, so you'll need VSCode, Docker, and the Dev Container extension.
+### Prerequisites
+This project was developed using “Visual Studio Code Dev-Container”, so you'll need:
+- VSCode.
+- Docker.
+- Dev Container extension.
 
 ### Opening the project
 First clone using:\
-```git clone git@github.com:TAULargeScaleWorkshop/RLAD.git ./large-scale-workshop```
+```git clone git@github.com:TAULargeScaleWorkshop/RLAD.git```
 
 Then, use `file -> open workspace from file...` to open the workspace file, and then `reopen in container`.
 
-The image mounts the large-scale-workshop directory into: `/workspaces/<cloned-repo-name>/`
+The image mounts the repo directory into: `/workspaces/RLAD/`
+
+**Important:**
+Please ensure that the project folder is named **`RLAD`**. Using any other folder name may cause issues with the system's configuration and file paths.
 
 ## Usage
 

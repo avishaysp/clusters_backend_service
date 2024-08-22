@@ -1,0 +1,899 @@
+2024/08/22 05:36:32 main.go:35: Loading service type: RegService
+2024/08/22 05:36:32 RegService.go:78: Start(): trying port 8502
+2024/08/22 05:36:32 RegService.go:48: startRegService(): calling bindgRPCToService
+2024/08/22 05:36:32 RegServiceServant.go:46: RegServiceServant::InitServant() called with root
+1099
+root - Created Chord Successfully
+2024/08/22 05:36:32 RegServiceServant.go:55: NewChord returned: &{{0xf11872 3006477107 <nil>}}
+2024/08/22 05:36:32 RegServiceServant.go:72: chordNode.IsFirst() result: true
+2024/08/22 05:36:32 RegService.go:56: RegService starts an IsAlive thread
+2024/08/22 05:36:32 RegService.go:60: RegService starts listening on [::]:8502
+2024/08/22 05:36:42 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns []
+2024/08/22 05:36:52 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns []
+2024/08/22 05:37:02 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns []
+2024/08/22 05:37:12 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [CacheService]
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@75a1cd57
+2024/08/22 05:37:12 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:37:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:37:22 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [CacheService]
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@1d384c19
+2024/08/22 05:37:22 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:37:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:37:22 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34203
+2024/08/22 05:37:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34203 is alive
+2024/08/22 05:37:32 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [CacheService]
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@37d02821
+2024/08/22 05:37:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:37:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:37:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34203
+2024/08/22 05:37:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34203 is alive
+2024/08/22 05:37:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:37:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:37:32 RegService.go:98: Register(): called with service: TestService, addresses: [address:"[::]:42917"  protocol:"GRPC" address:"tcp://127.0.0.1:40121"  protocol:"MQ"]
+2024/08/22 05:37:32 RegService.go:100: Register(): converted to: map[GRPC:[::]:42917 MQ:tcp://127.0.0.1:40121]
+getAllKeys returns [CacheService]
+2024/08/22 05:37:32 RegServiceUtils.go:25: 
+2024/08/22 05:37:32 RegServiceUtils.go:25: 
+key/value: TestService / [Ljava.lang.String;@6504e3b2 has been added.
+2024/08/22 05:37:32 RegServiceServant.go:113: Address $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 added for service TestService
+2024/08/22 05:37:42 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@6504e3b2
+2024/08/22 05:37:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:37:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@37d02821
+2024/08/22 05:37:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:37:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:37:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34203
+2024/08/22 05:37:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34203 is alive
+2024/08/22 05:37:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:37:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:37:42 RegService.go:98: Register(): called with service: TestService, addresses: [address:"[::]:46777"  protocol:"GRPC" address:"tcp://127.0.0.1:33053"  protocol:"MQ"]
+2024/08/22 05:37:42 RegService.go:100: Register(): converted to: map[GRPC:[::]:46777 MQ:tcp://127.0.0.1:33053]
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@6504e3b2
+2024/08/22 05:37:42 RegServiceUtils.go:25: 
+2024/08/22 05:37:42 RegServiceUtils.go:25: 
+key/value: TestService / [Ljava.lang.String;@24205030 has been added.
+2024/08/22 05:37:42 RegServiceServant.go:113: Address $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 added for service TestService
+2024/08/22 05:37:52 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@24205030
+2024/08/22 05:37:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:37:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:37:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:37:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@37d02821
+2024/08/22 05:37:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:37:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:37:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34203
+2024/08/22 05:37:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34203 is alive
+2024/08/22 05:37:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:37:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:38:02 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:38:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:38:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:38:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:38:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is alive
+2024/08/22 05:38:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:38:02 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@37d02821
+2024/08/22 05:38:02 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:38:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:38:02 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34203
+2024/08/22 05:38:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34203 is alive
+2024/08/22 05:38:02 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:38:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:38:12 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:38:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:38:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:38:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:38:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is alive
+2024/08/22 05:38:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:38:12 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@37d02821
+2024/08/22 05:38:12 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:38:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:38:12 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34203
+2024/08/22 05:38:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34203 is alive
+2024/08/22 05:38:12 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:38:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:38:22 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:38:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:38:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:38:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:38:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is alive
+2024/08/22 05:38:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:38:22 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@37d02821
+2024/08/22 05:38:22 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:38:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:38:22 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34203
+2024/08/22 05:38:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34203 is alive
+2024/08/22 05:38:22 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:38:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:38:32 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:38:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:38:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:38:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:38:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is alive
+2024/08/22 05:38:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:38:32 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@37d02821
+2024/08/22 05:38:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:38:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:38:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34203
+2024/08/22 05:38:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34203 is alive
+2024/08/22 05:38:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:38:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:38:42 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:38:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:38:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:38:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:38:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is alive
+2024/08/22 05:38:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:38:42 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@37d02821
+2024/08/22 05:38:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:38:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:38:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34203
+2024/08/22 05:38:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34203 is alive
+2024/08/22 05:38:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:38:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:38:52 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:38:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:38:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:38:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:38:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is alive
+2024/08/22 05:38:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:38:52 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@37d02821
+2024/08/22 05:38:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:38:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:38:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34203
+2024/08/22 05:38:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34203 is alive
+2024/08/22 05:38:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:38:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:39:02 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:39:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:39:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:39:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:39:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is alive
+2024/08/22 05:39:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:39:02 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@37d02821
+2024/08/22 05:39:02 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:39:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:39:02 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34203
+2024/08/22 05:39:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34203 is alive
+2024/08/22 05:39:02 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:39:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:39:12 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:39:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:39:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:39:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:39:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is alive
+2024/08/22 05:39:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:39:12 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@37d02821
+2024/08/22 05:39:12 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:39:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:39:12 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34203
+2024/08/22 05:39:17 RegServiceServant.go:236: IsAliveCheck: Node [::]:34203 is not alive: error = could not connect to server: failed to connect client to [::]:34203: context deadline exceeded
+2024/08/22 05:39:17 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:39:17 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:39:22 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:39:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:39:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:39:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:39:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is alive
+2024/08/22 05:39:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:39:22 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@37d02821
+2024/08/22 05:39:22 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:39:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:39:22 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34203
+2024/08/22 05:39:27 RegServiceServant.go:236: IsAliveCheck: Node [::]:34203 is not alive: error = could not connect to server: failed to connect client to [::]:34203: context deadline exceeded
+2024/08/22 05:39:27 RegServiceServant.go:239: IsAliveCheck: marking node as not alive! [::]:34203
+2024/08/22 05:39:27 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:39:27 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:39:27 RegServiceServant.go:253: Node $GRPC$[::]:34203 is not alive, unregistering...
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@37d02821
+2024/08/22 05:39:27 RegServiceUtils.go:25: 
+2024/08/22 05:39:27 RegServiceServant.go:143: Address $GRPC$[::]:34203 removed for service CacheService
+key/value: CacheService / [Ljava.lang.String;@7184f78b has been added.
+2024/08/22 05:39:32 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:39:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:39:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:39:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:39:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is alive
+2024/08/22 05:39:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:39:32 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:39:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:39:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:39:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:39:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:39:42 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:39:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:39:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:39:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:39:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is alive
+2024/08/22 05:39:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:39:42 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:39:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:39:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:39:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:39:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:39:52 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:39:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:39:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:39:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:39:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is alive
+2024/08/22 05:39:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:39:52 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:39:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:39:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:39:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:39:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:40:02 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:40:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:40:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:40:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:40:07 RegServiceServant.go:236: IsAliveCheck: Node [::]:46777 is not alive: error = could not connect to server: failed to connect client to [::]:46777: context deadline exceeded
+2024/08/22 05:40:07 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:40:07 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:40:07 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:40:07 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:40:07 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:40:07 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:40:12 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:40:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:40:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:40:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053
+2024/08/22 05:40:17 RegServiceServant.go:236: IsAliveCheck: Node [::]:46777 is not alive: error = could not connect to server: failed to connect client to [::]:46777: context deadline exceeded
+2024/08/22 05:40:17 RegServiceServant.go:239: IsAliveCheck: marking node as not alive! [::]:46777
+2024/08/22 05:40:17 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:40:17 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+2024/08/22 05:40:17 RegServiceServant.go:253: Node $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 is not alive, unregistering...
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@631a8f1
+2024/08/22 05:40:17 RegServiceUtils.go:25: 
+2024/08/22 05:40:17 RegServiceUtils.go:25: 
+2024/08/22 05:40:17 RegServiceServant.go:143: Address $GRPC$[::]:46777$MQ$tcp://127.0.0.1:33053 removed for service TestService
++++ jdk xcall_params_ret 0xf4fd40 0x12bf1e0 0xc0001a9498
++++ jdk xcall_params_ret 0xf503d0 0x12bf1e0 0xc0001a94a8
++++ jdk xcall_params_ret 0xf500c0 0x7fffa80017c0 0xc0001a9538
++++ jdk xcall_params_ret 0xf500c0 0x12bf1e0 0xc000226020
++++ jdk xcall_params_ret 0xf500c0 0x7fffa80017c0 0xc000226030
++++ jdk xcall_params_ret 0xf500c0 0x12bf1e0 0xc000226040
++++ jdk xcall_params_ret 0xf50180 0x12bf1e0 0xc000014170
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc000014470
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc000014478
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc000226920
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc0001a9680
++++ jdk xcall_params_ret 0xf500c0 0x12bf1e0 0xc000226d40
++++ jdk xcall_params_no_ret 0xf4ff90 0x12bf1e0 0xc000014ec0
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc0001a9948
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc0001a9990
++++ jdk xcall_params_ret 0xf50180 0x12bf1e0 0xc00010e1f8
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc000015378
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc0000153c0
++++ jdk xcall_params_no_ret 0xf4ff90 0x7fffac0017c0 0xc000226dc8
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc0000153d0
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc0000153d8
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc0002fe530
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc00010ee00
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc00010ee08
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc00010e160
++++ jdk xcall_params_ret 0xf500c0 0x7ffebc0017e0 0xc0000145a0
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc0000145a8
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc0002266f0
++++ jdk xcall_params_ret 0xf500c0 0x7ffeac001660 0xc00010ee98
++++ jdk xcall_params_ret 0xf50180 0x7ffeac001660 0xc00010eee0
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc000015150
++++ jdk xcall_params_ret 0xf500c0 0x12bf1e0 0xc000015a78
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc00010f630
++++ jdk xcall_params_ret 0xf50180 0x12bf1e0 0xc0002fe020
++++ jdk xcall_params_ret 0xf500c0 0x7ffebc0017e0 0xc000227648
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc0002fe360
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc000227be0
++++ jdk xcall_params_ret 0xf500c0 0x7fffa40017e0 0xc000226848
++++ jdk xcall_params_ret 0xf50180 0x7fffa40017e0 0xc0002fe0a0
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc0002fe410
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc0001a92f8
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc0002fe840
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc0002feb50
++++ jdk xcall_params_ret 0xf500c0 0x7fffa00017c0 0xc0002feee8
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc000227890
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc0005003c0
++++ jdk xcall_params_ret 0xf500c0 0x7fffa00017c0 0xc00010e1f8
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc00010e240
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc000500d40
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc0000146b8
++++ jdk xcall_params_no_ret 0xf4ff90 0x7ffebc0017e0 0xc0000146e0
++++ jdk xcall_params_ret 0xf500c0 0x7fffa40017e0 0xc0000146f0
++++ jdk xcall_params_ret 0xf50180 0x7fffa40017e0 0xc00010e178
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc000015040
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc00010e558
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc00010e5a0
++++ jdk xcall_params_ret 0xf50180 0x7fffa80017c0 0xc00010edd0
++++ jdk xcall_params_ret 0xf500c0 0x7fffa40017e0 0xc00010ef78
++++ jdk xcall_params_ret 0xf50180 0x7fffa40017e0 0xc0000155d0
++++ jdk xcall_params_ret 0xf50180 0x7fffa80017c0 0xc00010f0b0
++++ jdk xcall_params_ret 0xf500c0 0x7ffebc0017e0 0xc00010f608
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc000500e20
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc0002268b8
++++ jdk xcall_params_ret 0xf500c0 0x7fffa00017c0 0xc0001a81b0
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc0001a81b8
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc0001a81b0
++++ jdk xcall_params_no_ret 0xf4ff90 0x7ffebckey/value: TestService / [Ljava.lang.String;@55e8dbd2 has been added.
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:40:17 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:40:17 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:40:17 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:40:17 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:40:22 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:40:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:40:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:40:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:40:22 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:40:22 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:40:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:40:22 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:40:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:40:32 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:40:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:40:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:40:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:40:32 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:40:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:40:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:40:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:40:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:40:42 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:40:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:40:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:40:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:40:42 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:40:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:40:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:40:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:40:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:40:52 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:40:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:40:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:40:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:40:52 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:40:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:40:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:40:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:40:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:41:02 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:41:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:41:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:41:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:41:02 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:41:02 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:41:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:41:02 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:41:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:41:12 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:41:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:41:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:41:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:41:12 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:41:12 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:41:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:41:12 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:41:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:34751 is alive
+2024/08/22 05:41:22 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:41:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:41:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:41:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:41:22 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:41:22 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:41:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:41:22 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:41:27 RegServiceServant.go:236: IsAliveCheck: Node [::]:34751 is not alive: error = could not connect to server: failed to connect client to [::]:34751: context deadline exceeded
+2024/08/22 05:41:32 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:41:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:41:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:41:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:41:32 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:41:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:41:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:41:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:34751
+2024/08/22 05:41:37 RegServiceServant.go:236: IsAliveCheck: Node [::]:34751 is not alive: error = could not connect to server: failed to connect client to [::]:34751: context deadline exceeded
+2024/08/22 05:41:37 RegServiceServant.go:239: IsAliveCheck: marking node as not alive! [::]:34751
+2024/08/22 05:41:37 RegServiceServant.go:253: Node $GRPC$[::]:34751 is not alive, unregistering...
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@7184f78b
+2024/08/22 05:41:37 RegServiceUtils.go:25: 
+2024/08/22 05:41:37 RegServiceServant.go:143: Address $GRPC$[::]:34751 removed for service CacheService
+key/value: CacheService / [Ljava.lang.String;@6d1d7ebe has been added.
+2024/08/22 05:41:42 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:41:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:41:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:41:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:41:42 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:41:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:41:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:41:52 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:41:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:41:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:41:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:41:52 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:41:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:41:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:42:02 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:42:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:42:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:42:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:42:02 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:42:02 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:42:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:42:12 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:42:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:42:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:42:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:42:12 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:42:12 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:42:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:42:22 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:42:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:42:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:42:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:42:22 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:42:22 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:42:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:42:32 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:42:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:42:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:42:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:42:32 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:42:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:42:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:42:42 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:42:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:42:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:42:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:42:42 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:42:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:42:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:42:52 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:42:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:42:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:42:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:42:52 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:42:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:42:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:43:02 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:43:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:43:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:43:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:43:02 RegServiceServant.go:244: IsAliveCheck: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:43:02 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:43:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:43:12 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:43:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:43:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:43:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:43:17 RegServiceServant.go:236: IsAliveCheck: Node [::]:38767 is not alive: error = could not connect to server: failed to connect client to [::]:38767: context deadline exceeded
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:43:17 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:43:17 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:43:22 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:43:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:43:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+2024/08/22 05:43:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767
+2024/08/22 05:43:27 RegServiceServant.go:236: IsAliveCheck: Node [::]:38767 is not alive: error = could not connect to server: failed to connect client to [::]:38767: context deadline exceeded
+2024/08/22 05:43:27 RegServiceServant.go:239: IsAliveCheck: marking node as not alive! [::]:38767
+2024/08/22 05:43:27 RegServiceServant.go:253: Node $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 is not alive, unregistering...
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@55e8dbd2
+2024/08/22 05:43:27 RegServiceUtils.go:25: 
+2024/08/22 05:43:27 RegServiceUtils.go:25: 
+2024/08/22 05:43:27 RegServiceServant.go:143: Address $MQ$tcp://127.0.0.1:41543$GRPC$[::]:38767 removed for service TestService
+key/value: TestService / [Ljava.lang.String;@75b7b3f4 has been added.
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:43:27 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:43:27 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:43:32 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@75b7b3f4
+2024/08/22 05:43:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:43:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:43:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:43:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:43:42 RegServiceServant.go:193: IsAliveCheck: called
+0017e0 0xc0001a8260
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc0001a8268
++++ jdk xcall_params_ret 0xf500c0 0x7fffa00017c0 0xc000226480
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc000226488
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc000226ee8
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc0002fe710
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc0002fe718
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc0001a9a78
++++ jdk xcall_params_ret 0xf500c0 0x7ffebc0017e0 0xc000500180
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc0002fed68
++++ jdk xcall_params_ret 0xf50180 0x7fffa80017c0 0xc0002fefd8
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc000500a30
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc0002ff310
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc000500c08
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc000501340
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc000501348
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc000501700
++++ jdk xcall_params_ret 0xf500c0 0x7fffa00017c0 0xc00010e0b0
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc00010e0b8
++++ jdk xcall_params_ret 0xf50180 0x7ffebc0017e0 0xc00010e1c8
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc0002fe018
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc0002fe060
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc000226508
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc000226d50
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc000226d58
++++ jdk xcall_params_ret 0xf50180 0x7fffa80017c0 0xc00010ec58
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc0002fece0
++++ jdk xcall_params_no_ret 0xf4ff90 0x7fffac0017c0 0xc0002fed08
++++ jdk xcall_params_ret 0xf500c0 0x7fffa80017c0 0xc0002278c8
++++ jdk xcall_params_ret 0xf50180 0x7fffa80017c0 0xc000227910
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc00010f238
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc00010f730
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc00010f738
++++ jdk xcall_params_ret 0xf50180 0x7fffa80017c0 0xc0001a8828
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc0001a93f0
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc0001a93f8
++++ jdk xcall_params_ret 0xf50180 0x7fffa80017c0 0xc0001a99c8
++++ jdk xcall_params_ret 0xf500c0 0x7fffa80017c0 0xc000014788
++++ jdk xcall_params_ret 0xf50180 0x7fffa80017c0 0xc000500188
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc0002ff1b8
++++ jdk xcall_params_ret 0xf500c0 0x7fffac0017c0 0xc0001a9c88
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc0001a9ce0
++++ jdk xcall_params_ret 0xf50180 0x7fffa80017c0 0xc0005002d8
++++ jdk xcall_params_ret 0xf500c0 0x7fffa00017c0 0xc0002fe010
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc0002fe018
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc000500d48
++++ jdk xcall_params_ret 0xf500c0 0x7fffa00017c0 0xc000014650
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc000501118
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc000501558
++++ jdk xcall_params_ret 0xf500c0 0x7fffa00017c0 0xc000014aa0
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc000501728
++++ jdk xcall_params_ret 0xf50180 0x7fffa80017c0 0xc0000150b8
++++ jdk xcall_params_ret 0xf500c0 0x7fffa00017c0 0xc0000155b0
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc0002fe9f8
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc0002fefd8
++++ jdk xcall_params_ret 0xf500c0 0x7fffa80017c0 0xc0002ff318
++++ jdk xcall_params_ret 0xf50180 0x7fffa80017c0 0xc0002ff360
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc0002ffd00
++++ jdk xcall_params_ret 0xf500c0 0x7ffea80017e0 0xc0001a83a8
++++ jdk xcall_params_ret 0xf50180 0x7ffea80017e0 0xc000501f78
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc000226d10
++++ jdk xcall_params_no_ret 0xf4ff90 0x7fffac0017c0 0xc000226d30
++++ jdk xcall_params_ret 0xf50180 0x7fffac0017c0 0xc000226d38
++++ jdk xcall_params_ret 0xf500c0 0x7ffea80017e0 0xc0001a8490
++++ jdk xcall_params_ret 0xf50180 0x7ffea80017e0 0xc0001a8498
++++ jdk xcall_params_ret 0xf50180 0x7fffa00017c0 0xc000227008
++++ jdk xcall_params_ret 0xf500c0 0x7fffgetAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@75b7b3f4
+2024/08/22 05:43:42 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:43:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:43:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:43:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:43:52 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@75b7b3f4
+2024/08/22 05:43:52 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:43:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:43:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:43:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:44:02 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@75b7b3f4
+2024/08/22 05:44:02 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:44:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:44:02 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:44:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:44:12 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@75b7b3f4
+2024/08/22 05:44:12 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:44:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is alive
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:44:12 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:44:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:44:22 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@75b7b3f4
+2024/08/22 05:44:22 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:44:27 RegServiceServant.go:236: IsAliveCheck: Node [::]:42917 is not alive: error = could not connect to server: failed to connect client to [::]:42917: context deadline exceeded
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:44:27 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:44:27 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:44:32 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [TestService, CacheService]
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@75b7b3f4
+2024/08/22 05:44:32 RegServiceServant.go:210: IsAliveCheck: Service = TestService, Node = $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121
+2024/08/22 05:44:37 RegServiceServant.go:236: IsAliveCheck: Node [::]:42917 is not alive: error = could not connect to server: failed to connect client to [::]:42917: context deadline exceeded
+2024/08/22 05:44:37 RegServiceServant.go:239: IsAliveCheck: marking node as not alive! [::]:42917
+2024/08/22 05:44:37 RegServiceServant.go:253: Node $GRPC$[::]:42917$MQ$tcp://127.0.0.1:40121 is not alive, unregistering...
+Search TestService 001111101011101011000
+value is [Ljava.lang.String;@75b7b3f4
+2024/08/22 05:44:37 RegServiceUtils.go:25: 
+2024/08/22 05:44:37 RegServiceUtils.go:25: 
+Run through all replications.
+TestService has been removed.
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:44:37 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:44:37 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:44:42 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [CacheService]
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:44:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:44:42 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:44:52 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [CacheService]
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:44:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:44:52 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:45:02 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [CacheService]
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:45:02 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:45:02 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:45:12 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [CacheService]
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:45:12 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:45:12 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:45:22 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [CacheService]
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:45:22 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:45:22 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:45:32 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [CacheService]
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:45:32 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:45:32 RegServiceServant.go:244: IsAliveCheck: Node $GRPC$[::]:39881 is alive
+2024/08/22 05:45:42 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [CacheService]
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:45:42 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:45:47 RegServiceServant.go:236: IsAliveCheck: Node [::]:39881 is not alive: error = could not connect to server: failed to connect client to [::]:39881: context deadline exceeded
+2024/08/22 05:45:52 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns [CacheService]
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:45:52 RegServiceServant.go:210: IsAliveCheck: Service = CacheService, Node = $GRPC$[::]:39881
+2024/08/22 05:45:57 RegServiceServant.go:236: IsAliveCheck: Node [::]:39881 is not alive: error = could not connect to server: failed to connect client to [::]:39881: context deadline exceeded
+2024/08/22 05:45:57 RegServiceServant.go:239: IsAliveCheck: marking node as not alive! [::]:39881
+2024/08/22 05:45:57 RegServiceServant.go:253: Node $GRPC$[::]:39881 is not alive, unregistering...
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@6d1d7ebe
+2024/08/22 05:45:57 RegServiceUtils.go:25: 
+Run through all replications.
+CacheService has been removed.
+2024/08/22 05:46:02 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns []
+2024/08/22 05:46:12 RegServiceServant.go:193: IsAliveCheck: called
+getAllKeys returns []
+2024/08/22 05:46:22 RegServiceServant.go:193: IsAliveCheck: called
+java.rmi.ConnectException: Connection refused to host: 172.17.0.2; nested exception is: 
+	java.net.ConnectException: Connection refused
+	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:625)
+	at java.rmi/sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:217)
+	at java.rmi/sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:204)
+	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:134)
+	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:215)
+	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:160)
+	at jdk.proxy1/jdk.proxy1.$Proxy0.getID(Unknown Source)
+	at dht.NodeClass.equals(NodeClass.java:212)
+	at dht.NodeClass.getAllKeys(NodeClass.java:364)
+	at dht.Chord.getAllKeys(Chord.java:59)
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:589)
+	at java.base/sun.nio.ch.Net.connect(Net.java:578)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at java.base/java.net.Socket.connect(Socket.java:686)
+	at java.base/java.net.Socket.<init>(Socket.java:555)
+	at java.base/java.net.Socket.<init>(Socket.java:324)
+	at java.rmi/sun.rmi.transport.tcp.TCPDirectSocketFactory.createSocket(TCPDirectSocketFactory.java:40)
+	at java.rmi/sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619)
+	... 9 more
+2024/08/22 05:46:22 RegServiceServant.go:198: chordNode.GetAllKeys failed with error: java.rmi.ConnectException: Connection refused to host: 172.17.0.2; nested exception is: 
+	java.net.ConnectException: Connection refused

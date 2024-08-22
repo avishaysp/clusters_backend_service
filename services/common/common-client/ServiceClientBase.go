@@ -21,7 +21,7 @@ type ServiceClientBase[client_t any] struct {
 
 func (obj *ServiceClientBase[client_t]) getMQNodes() ([]string, error) {
 	regClient := RegServiceClient.NewRegServiceClient(obj.RegistryAddresses)
-	nodes, err := regClient.Discover(obj.ServiceName + "MQ")
+	nodes, err := regClient.Discover(obj.ServiceName, "MQ")
 	if err != nil {
 		Logger.Printf("getMQNodes(): Error calling Discover: %s", err)
 	}
@@ -52,16 +52,18 @@ func (obj *ServiceClientBase[client_t]) ConnectMQ() (socket *zmq4.Socket, err er
 // randomly picks a service node address to connect to
 func (obj *ServiceClientBase[client_t]) pickNode() string {
 	regClient := RegServiceClient.NewRegServiceClient(obj.RegistryAddresses)
-	nodes, err := regClient.Discover(obj.ServiceName)
+	nodes, err := regClient.Discover(obj.ServiceName, "GRPC")
 	if err != nil || len(nodes) == 0 {
 		return ""
 	}
+
+	// return a random node address
 	randomIndex := rand.Intn(len(nodes))
 	return nodes[randomIndex]
 }
 
 func (obj *ServiceClientBase[client_t]) Connect() (res client_t, closeFunc func(), err error) {
-	// pick some node of the service
+	// pick some node of the service (only GRPC)
 	node_address := obj.pickNode()
 	if node_address == "" {
 		var empty client_t

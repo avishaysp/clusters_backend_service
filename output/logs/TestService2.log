@@ -1,0 +1,23 @@
+2024/08/22 05:37:42 main.go:35: Loading service type: TestService
+2024/08/22 05:37:42 TestServiceServant.go:53: TestServiceServant::InitServant() called with [127.0.0.1:8502 127.0.0.1:8503 127.0.0.1:8504]
+2024/08/22 05:37:42 ServiceBase.go:126: Start(TestService, 0)
+2024/08/22 05:37:42 ServiceBase.go:20: bindMQToService() called with listenPort 0
+2024/08/22 05:37:42 ServiceBase.go:32: bindMQToService() calling Bind on tcp://127.0.0.1:*
+2024/08/22 05:37:42 ServiceBase.go:42: bindMQToService() GetLastEndpoint returned tcp://127.0.0.1:33053
+2024/08/22 05:37:42 ServiceBase.go:148: MQ: TestService calling start_mq on tcp://127.0.0.1:33053
+2024/08/22 05:37:42 ServiceBase.go:46: startMQ(): entered for loop
+2024/08/22 05:37:42 ServiceBase.go:155: GRPC: TestService starts listening on [::]:46777
+2024/08/22 05:37:52 TestService.go:161: IsAlive called
+2024/08/22 05:38:02 TestService.go:161: IsAlive called
+2024/08/22 05:38:12 TestService.go:161: IsAlive called
+2024/08/22 05:38:22 TestService.go:161: IsAlive called
+2024/08/22 05:38:32 TestService.go:161: IsAlive called
+2024/08/22 05:38:42 TestService.go:161: IsAlive called
+2024/08/22 05:38:52 TestService.go:161: IsAlive called
+2024/08/22 05:39:02 TestService.go:161: IsAlive called
+2024/08/22 05:39:12 TestService.go:161: IsAlive called
+2024/08/22 05:39:22 TestService.go:161: IsAlive called
+2024/08/22 05:39:32 TestService.go:161: IsAlive called
+2024/08/22 05:39:42 TestService.go:161: IsAlive called
+2024/08/22 05:39:52 TestService.go:161: IsAlive called
+Failed to destroy JVM: -1

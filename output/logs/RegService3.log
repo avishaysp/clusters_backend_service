@@ -1,0 +1,25 @@
+2024/08/22 05:36:52 main.go:35: Loading service type: RegService
+2024/08/22 05:36:52 RegService.go:78: Start(): trying port 8503
+2024/08/22 05:36:52 RegService.go:28: startgRPC(): failed to listen: listen tcp :8503: bind: address already in use
+2024/08/22 05:36:52 RegService.go:83: Start(): startRegService failed listen tcp :8503: bind: address already in use for port 8503
+2024/08/22 05:36:52 RegService.go:78: Start(): trying port 8504
+2024/08/22 05:36:52 RegService.go:48: startRegService(): calling bindgRPCToService
+2024/08/22 05:36:52 RegServiceServant.go:46: RegServiceServant::InitServant() called with join_root
+join_root - Joined Chord Successfully
+2024/08/22 05:36:52 RegServiceServant.go:64: JoinChord returned: &{{0xf119fa 3006477107 <nil>}}
+2024/08/22 05:36:52 RegServiceServant.go:72: chordNode.IsFirst() result: false
+2024/08/22 05:36:52 RegService.go:60: RegService starts listening on [::]:8504
+2024/08/22 05:37:22 RegService.go:98: Register(): called with service: CacheService, addresses: [address:"[::]:34751"  protocol:"GRPC"]
+2024/08/22 05:37:22 RegService.go:100: Register(): converted to: map[GRPC:[::]:34751]
+getAllKeys returns [CacheService]
+Search CacheService 110110100110110100101
+value is [Ljava.lang.String;@22b97792
+2024/08/22 05:37:22 RegServiceUtils.go:25: 
+key/value: CacheService / [Ljava.lang.String;@e9d6363 has been added.
+2024/08/22 05:37:22 RegServiceServant.go:113: Address $GRPC$[::]:34751 added for service CacheService
++++ jdk xcall_params_ret 0xf4ff70 0x12bf360 0xc0002802f8
++++ jdk xcall_params_ret 0xf50550 0x12bf360 0xc000280308
++++ jdk xcall_params_ret 0xf50240 0x7fffa0001660 0xc000198b00
++++ jdk xcall_params_ret 0xf50300 0x7fffa0001660 0xc000198b08
++++ jdk xcall_params_no_ret 0xf50110 0x7fffa0001660 0xc000198b38
+Failed to destroy JVM: -1

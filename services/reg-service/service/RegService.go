@@ -86,15 +86,26 @@ func Start(configData []byte) error {
 	return fmt.Errorf("failed to start RegService")
 }
 
+func convertNodeAddress(full_addresses []*FullAddress) RegServiceServant.NodeAddresses {
+	node_addresses := RegServiceServant.NodeAddresses{}
+	for _, full_addr := range full_addresses {
+		node_addresses[full_addr.Protocol] = full_addr.Address
+	}
+	return node_addresses
+}
+
 func (obj *regServiceImplementation) Register(_ context.Context, params *UpdateRegistryParameters) (_ *emptypb.Empty, err error) {
-	Logger.Printf("Register called with service: %s, address: %s", params.ServiceName, params.NodeAddr)
-	RegServiceServant.Register(params.ServiceName, params.NodeAddr)
+	Logger.Printf("Register(): called with service: %s, addresses: %v", params.ServiceName, params.Addresses)
+	node_addresses := convertNodeAddress(params.Addresses)
+	Logger.Printf("Register(): converted to: %v", node_addresses)
+	RegServiceServant.Register(params.ServiceName, node_addresses)
 	return &emptypb.Empty{}, nil
 }
 
 func (obj *regServiceImplementation) Unregister(_ context.Context, params *UpdateRegistryParameters) (_ *emptypb.Empty, err error) {
-	Logger.Printf("Unregister called with service: %s, address: %s", params.ServiceName, params.NodeAddr)
-	RegServiceServant.Unregister(params.ServiceName, params.NodeAddr)
+	Logger.Printf("Unregister called with service: %s, addresses: %v", params.ServiceName, params.Addresses)
+	node_addresses := convertNodeAddress(params.Addresses)
+	RegServiceServant.Unregister(params.ServiceName, node_addresses)
 	return &emptypb.Empty{}, nil
 }
 

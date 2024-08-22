@@ -1,0 +1,33 @@
+2024/08/22 05:37:22 main.go:35: Loading service type: CacheService
+2024/08/22 05:37:22 CacheServiceServant.go:36: CacheServiceServant::InitServant() called with join_root
+join_root - Joined Chord Successfully
+2024/08/22 05:37:22 CacheServiceServant.go:53: JoinChord returned: &{{0xf119fa 3006477107 <nil>}}
+2024/08/22 05:37:22 CacheServiceServant.go:62: chordNode.IsFirst() result: false
+2024/08/22 05:37:22 ServiceBase.go:126: Start(CacheService, 0)
+2024/08/22 05:37:22 ServiceBase.go:155: GRPC: CacheService starts listening on [::]:34751
+2024/08/22 05:37:32 CacheService.go:73: IsAlive called 
+2024/08/22 05:37:42 CacheService.go:73: IsAlive called 
+2024/08/22 05:37:52 CacheService.go:73: IsAlive called 
+2024/08/22 05:38:02 CacheService.go:73: IsAlive called 
+2024/08/22 05:38:12 CacheService.go:73: IsAlive called 
+2024/08/22 05:38:22 CacheService.go:73: IsAlive called 
+2024/08/22 05:38:32 CacheService.go:73: IsAlive called 
+2024/08/22 05:38:42 CacheService.go:73: IsAlive called 
+2024/08/22 05:38:52 CacheService.go:73: IsAlive called 
+2024/08/22 05:39:02 CacheService.go:73: IsAlive called 
+2024/08/22 05:39:17 CacheService.go:73: IsAlive called 
+2024/08/22 05:39:27 CacheService.go:73: IsAlive called 
+2024/08/22 05:39:32 CacheService.go:73: IsAlive called 
+2024/08/22 05:39:42 CacheService.go:73: IsAlive called 
+2024/08/22 05:39:52 CacheService.go:73: IsAlive called 
+2024/08/22 05:40:07 CacheService.go:73: IsAlive called 
+2024/08/22 05:40:17 CacheService.go:73: IsAlive called 
+2024/08/22 05:40:22 CacheService.go:73: IsAlive called 
+2024/08/22 05:40:32 CacheService.go:73: IsAlive called 
+2024/08/22 05:40:42 CacheService.go:73: IsAlive called 
+2024/08/22 05:40:52 CacheService.go:73: IsAlive called 
+2024/08/22 05:41:02 CacheService.go:73: IsAlive called 
+2024/08/22 05:41:12 CacheService.go:73: IsAlive called 
++++ jdk xcall_params_ret 0xf3af10 0x12bf360 0xc000014378
++++ jdk xcall_params_ret 0xf4fd90 0x12bf360 0xc000014388
+Failed to destroy JVM: -1
